@@ -1,0 +1,42 @@
+app-timer {
+    left: 90%;
+}
+
+app-rabbits {
+    top: 80%;
+    left: 10%;
+}
+
+app-bowl {
+    top: 25% ;
+    left: 25%;
+}
+
+app-order {
+    top: 5%;
+    left: 40%;
+}
+
+app-toppings {
+    top: 70%;
+    left: 10%;
+}
+
+h2 {
+    left: 40%;
+    top: 10%;
+}
+
+app-toppings, app-bowl, app-rabbits, app-timer, h3, button, app-order, h2 {
+    position: absolute;
+}
+
+h3 {
+    left: 80%;
+}
+
+button {
+    top: 50%;
+    left: 70%;
+}
+
