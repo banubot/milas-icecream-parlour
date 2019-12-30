@@ -2,9 +2,9 @@
 runtime: nodejs10
 handlers:
 - url: / 
-  static_files: dist/index.html 
-  upload: dist/index.html 
+  static_files: dist/icecream-parlour/index.html 
+  upload: dist/icecream-parlour/index.html 
 - url: / 
-  static_dir: dist
+  static_dir: dist/icecream-parlour
 # [END runtime]
 
