@@ -9,7 +9,7 @@ export class TimerComponent  {
   time;
   
   constructor() {  
-    this.time = 30;
+    this.time = 45;
     setInterval(() => this.updateTimer(this.time), 1000);
   }
 

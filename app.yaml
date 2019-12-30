@@ -1,0 +1,10 @@
+# [START runtime]
+runtime: nodejs8
+handlers:- 
+url: / 
+static_files: dist/index.html 
+upload: dist/index.html- 
+url: / 
+static_dir: dist
+# [END runtime]
+
