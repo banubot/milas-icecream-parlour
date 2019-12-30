@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-order',
   template: `
     <div>
-      <img src="../../assets/order.png" />
+      <h4>Order:</h4>
       <p>
         {{ orderText }}
       </p>

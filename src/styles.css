@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url("assets/bkg.png");
+    background-repeat: repeat;
+    font-family: font;
+    color: #7F0000;
+}
+
+button {
+    font-family: font;
+    color: #7F0000;
+}
+
+@font-face {
+    font-family: font;
+    src: url("assets/font.ttf");
+  }

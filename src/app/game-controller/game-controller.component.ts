@@ -9,12 +9,15 @@ import { ToppingsComponent } from '../toppings/toppings.component';
   selector: 'app-game-controller',
   template: `
     <div>
+      <button (click)="restart()" id="new">New Game</button>
       <app-order></app-order>
       <app-timer></app-timer>
+      <h4>Toppings:</h4>
       <app-toppings (emitter)="onSelectTopping($event)"></app-toppings>
       <app-bowl></app-bowl>
+      <h5>Icecream:</h5>
       <app-rabbits (emitter)="onSelectRabbit($event)"></app-rabbits>
-      <button (click)="submit()">Submit</button>
+      <button (click)="submit()" id="submit">Submit</button>
       <h2> {{ this.banner }} </h2>
       <h3> Round {{ round }} </h3>
     </div>
@@ -39,10 +42,19 @@ export class GameControllerComponent implements OnInit {
     this.timer = new TimerComponent();
     this.timerStart = this.timer.time;
     this.round = 0;
-    this.banner = "Complete the order before the clock runs out!"
+    this.banner = "Complete the order before the clock runs out!";
   }
 
   ngOnInit() {
+    this.nextOrder();
+  }
+
+  restart() {
+    this.timerStart = 45;
+    this.round = 0;
+    this.banner = "Complete the order before the clock runs out!";
+    document.getElementById("new").style.visibility = "hidden";
+    document.getElementById("submit").style.visibility = "visible";
     this.nextOrder();
   }
 
@@ -90,6 +102,8 @@ export class GameControllerComponent implements OnInit {
     } else {
       this.banner = "You have angered the rabbits! GAME OVER";
       this.timer.updateTimer(0);
+      document.getElementById("new").style.visibility = "visible";
+      document.getElementById("submit").style.visibility = "hidden";
     }
   }
 

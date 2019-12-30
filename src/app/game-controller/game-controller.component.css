@@ -1,9 +1,7 @@
-app-timer {
-    left: 90%;
-}
+
 
 app-rabbits {
-    top: 80%;
+    top: 85%;
     left: 10%;
 }
 
@@ -14,7 +12,7 @@ app-bowl {
 
 app-order {
     top: 5%;
-    left: 40%;
+    left: 10%;
 }
 
 app-toppings {
@@ -22,21 +20,51 @@ app-toppings {
     left: 10%;
 }
 
-h2 {
-    left: 40%;
-    top: 10%;
+
+app-toppings, app-bowl, app-rabbits, app-timer, h3, button, app-order, h2, h3, h4, h5 {
+    position: absolute;
+    font-size: 20px;
+}
+app-timer {
+    left: 85%;
+    font-size: 55px;
 }
 
-app-toppings, app-bowl, app-rabbits, app-timer, h3, button, app-order, h2 {
-    position: absolute;
+
+h2 {
+    left: 25%;
+    top: 63%;
+    font-size: 30px;
 }
 
 h3 {
-    left: 80%;
+    left: 85%;
 }
 
 button {
-    top: 50%;
+    top: 55%;
     left: 70%;
+    font-size: 30px;
+    border: 1px solid #7F0000;
+    background-color: white;
+    padding: 10px;
+    
 }
 
+button:hover {
+    background-color: #FFD7D7;
+    border: 1px solid white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#new {
+    visibility: hidden;
+}
+
+h4 {
+    top: 70%;
+}
+
+h5 {
+    top: 85%;
+}
