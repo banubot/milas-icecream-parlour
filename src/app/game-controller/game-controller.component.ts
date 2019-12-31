@@ -10,6 +10,7 @@ import { ToppingsComponent } from '../toppings/toppings.component';
   template: `
     <div>
       <div id="music">
+        <iframe src="assets/silence.mp3" allow="autoplay" style="display:none"></iframe>
         <audio autoplay loop controls>
           <source src="assets/Ice-Cream-Banana-rama-jama.mp3" type="audio/mpeg">
         </audio>
