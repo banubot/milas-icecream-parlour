@@ -21,7 +21,7 @@ app-toppings {
 }
 
 
-app-toppings, app-bowl, app-rabbits, app-timer, h3, button, app-order, h2, h3, h4, h5 {
+app-toppings, app-bowl, app-rabbits, app-timer, h3, button, app-order, h2, h3, h4, h5, #music {
     position: absolute;
     font-size: 20px;
 }
@@ -30,6 +30,21 @@ app-timer {
     font-size: 55px;
 }
 
+#music {
+    left: 85%;
+    top: 90%;
+}
+
+h6 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+audio {
+    width: 100px;
+    height: 20px;
+}
 
 h2 {
     left: 25%;

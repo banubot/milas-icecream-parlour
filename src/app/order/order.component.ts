@@ -23,8 +23,6 @@ export class OrderComponent {
   toppingsPicked;
   numToPick;
   constructor() { 
-    this.numToppingsAvailable = 3;
-    this.numRabbitsAvailable = 2;
     this.toppingNames = ["Chocolate Sauce", "Sprinkles", 
       "Banana", "Caramel Sauce", "Whipped Cream", "Cherry",
       "Strawberries", "Chocolate Chip Cookie"];
@@ -33,12 +31,19 @@ export class OrderComponent {
     this.toppingsPicked = [];
     this.rabbitPicked = 0;
     this.numToPick = 0;
+    this.resetAvailable();
   }
   
   newOrder() {
     this.pickRabbit();
     this.pickToppings();
     this.setText();
+    console.log(this.orderText);
+  }
+
+  resetAvailable() {
+    this.numToppingsAvailable = 3;
+    this.numRabbitsAvailable = 2;
   }
 
   moreRabbits() {

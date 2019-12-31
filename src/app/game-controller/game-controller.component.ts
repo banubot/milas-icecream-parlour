@@ -9,6 +9,12 @@ import { ToppingsComponent } from '../toppings/toppings.component';
   selector: 'app-game-controller',
   template: `
     <div>
+      <div id="music">
+        <audio autoplay loop controls>
+          <source src="assets/Ice-Cream-Banana-rama-jama.mp3" type="audio/mpeg">
+        </audio>
+        <h6>Music by <a href='#'>Gus</a></h6>
+      </div>
       <button (click)="restart()" id="new">New Game</button>
       <app-order></app-order>
       <app-timer></app-timer>
@@ -27,7 +33,7 @@ import { ToppingsComponent } from '../toppings/toppings.component';
 export class GameControllerComponent implements OnInit {
   banner: string;
   @ViewChild(BowlComponent, null) bowl: BowlComponent;
-  @ViewChild(OrderComponent, null) order: OrderComponent;
+  @ViewChild(OrderComponent, {static: true}) order: OrderComponent;
   @ViewChild(RabbitsComponent, null) rabbits: RabbitsComponent;
   @ViewChild(TimerComponent, null) timer: TimerComponent;
   @ViewChild(ToppingsComponent, null) toppings: ToppingsComponent;
@@ -55,6 +61,7 @@ export class GameControllerComponent implements OnInit {
     this.banner = "Complete the order before the clock runs out!";
     document.getElementById("new").style.visibility = "hidden";
     document.getElementById("submit").style.visibility = "visible";
+    this.order.resetAvailable();
     this.nextOrder();
   }
 
@@ -79,7 +86,6 @@ export class GameControllerComponent implements OnInit {
   }
 
   /* get harder over time
-   * todo: move buttons around when they get used to them
    */
   updateRound() {
     this.round++;
