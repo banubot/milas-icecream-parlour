@@ -26,10 +26,10 @@ export class OrderComponent {
     this.numToppingsAvailable = 3;
     this.numRabbitsAvailable = 2;
     this.toppingNames = ["Chocolate Sauce", "Sprinkles", 
-      "Banana", "Caramel Sauce", "Cherry",
-      "Strawberries", "Marshmellows", "Chocolate Chip Cookie"]
+      "Banana", "Caramel Sauce", "Whipped Cream", "Cherry",
+      "Strawberries", "Chocolate Chip Cookie"];
     this.rabbitNames = ["Chocolate", "Vanilla", "Strawberry",
-      "Caramel", "Mint", "Cookies n' Cream", "Neopolitan", "Blueberry"]
+      "Caramel", "Mint", "Cookies n' Cream", "Neopolitan", "Blueberry"];
     this.toppingsPicked = [];
     this.rabbitPicked = 0;
     this.numToPick = 0;
