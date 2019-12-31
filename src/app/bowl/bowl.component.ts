@@ -4,25 +4,25 @@ import { Component } from '@angular/core';
   selector: 'app-bowl',
   template: `
     <div>
-      <img src="../../assets/cookie.png" id="tb9" />
-      <img src="../../assets/chocolate.png" id="rb0" />
-      <img src="../../assets/vanilla.png" id="rb1" />
-      <img src="../../assets/strawberry.png" id="rb2" />
-      <img src="../../assets/caramel.png" id="rb3" />
-      <img src="../../assets/mint.png" id="rb4" />
-      <img src="../../assets/cookies.png" id="rb5" />
-      <img src="../../assets/neo.png" id="rb6" />
-      <img src="../../assets/blueberry.png" id="rb7" />
-      <img src="../../assets/chocoSauce.png" id="tb0" />
-      <img src="../../assets/caramelSauce.png" id="tb3" />
-      <img src="../../assets/sprinkles.png" id="tb1" />
-      <img src="../../assets/banana.png" id="tb2" />
-      <img src="../../assets/marshmallow.png" id="tb8" />
-      <img src="../../assets/whipped.png" id="tb4" />
-      <img src="../../assets/cherry.png" id="tb5" />
-      <img src="../../assets/strawberries.png" id="tb7" />
-      <img src="../../assets/oreos.png" id="tb6" />
-      <img src="../../assets/bowl.png" id="bowl" />
+      <img src="assets/cookie.png" id="tb9" />
+      <img src="assets/chocolate.png" id="rb0" />
+      <img src="assets/vanilla.png" id="rb1" />
+      <img src="assets/strawberry.png" id="rb2" />
+      <img src="assets/caramel.png" id="rb3" />
+      <img src="assets/mint.png" id="rb4" />
+      <img src="assets/cookies.png" id="rb5" />
+      <img src="assets/neo.png" id="rb6" />
+      <img src="assets/blueberry.png" id="rb7" />
+      <img src="assets/chocoSauce.png" id="tb0" />
+      <img src="assets/caramelSauce.png" id="tb3" />
+      <img src="assets/sprinkles.png" id="tb1" />
+      <img src="assets/banana.png" id="tb2" />
+      <img src="assets/marshmallow.png" id="tb8" />
+      <img src="assets/whipped.png" id="tb4" />
+      <img src="assets/cherry.png" id="tb5" />
+      <img src="assets/strawberries.png" id="tb7" />
+      <img src="assets/oreos.png" id="tb6" />
+      <img src="assets/bowl.png" id="bowl" />
     </div>
   `,
   styleUrls: ['./bowl.component.css']
