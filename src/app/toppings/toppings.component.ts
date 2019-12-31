@@ -10,10 +10,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
       <img src="assets/caramelSauce.png" id="t3" (click)="choose(3)" />
       <img src="assets/whipped.png" id="t4" (click)="choose(4)" />
       <img src="assets/cherry.png" id="t5" (click)="choose(5)" />
-      <img src="assets/oreos.png" id="t6" (click)="choose(6)" />
-      <img src="assets/strawberries.png" id="t7" (click)="choose(7)" />
-      <img src="assets/marshmallow.png" id="t8" (click)="choose(8)" />
-      <img src="assets/cookie.png" id="t9" (click)="choose(9)" />
+      <img src="assets/strawberries.png" id="t6" (click)="choose(6)" />
+      <img src="assets/cookie.png" id="t7" (click)="choose(7)" />
     </div>
   `,
   styleUrls: ['./toppings.component.css']
@@ -24,7 +22,7 @@ export class ToppingsComponent {
   @Output() emitter = new EventEmitter<number>();
   constructor() { 
     this.chosen = [];
-    this.numToppings = 10;
+    this.numToppings = 8;
   }
 
   reset() {

@@ -35,10 +35,10 @@ export class GameControllerComponent implements OnInit {
   round;
 
   constructor() { 
-    this.bowl = new BowlComponent();
     this.order = new OrderComponent();
     this.rabbits = new RabbitsComponent();
     this.toppings = new ToppingsComponent();
+    this.bowl = new BowlComponent();
     this.timer = new TimerComponent();
     this.timerStart = this.timer.time;
     this.round = 0;
