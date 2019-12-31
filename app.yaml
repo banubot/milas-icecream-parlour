@@ -5,6 +5,6 @@ handlers:
   static_files: dist/icecream-parlour/index.html 
   upload: dist/icecream-parlour/index.html 
 - url: / 
-  static_dir: dist/icecream-parlour/assets
+  static_dir: dist/icecream-parlour/
 # [END runtime]
 
