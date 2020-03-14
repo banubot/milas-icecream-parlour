@@ -1,65 +1,58 @@
 
 
 app-rabbits {
-    top: 85%;
-    left: 10%;
+    top: 36vw;
+    left: 30vw;
 }
 
 app-bowl {
-    top: 25% ;
-    left: 25%;
+    top: 20vw;
+    left: 2vw;
 }
 
 app-order {
-    top: 5%;
-    left: 10%;
+    top: 8vw;
+    left: 2vw;
+    font-size: 1.7vw;
 }
 
 app-toppings {
-    top: 70%;
-    left: 10%;
+    top: 24vw;
+    left: 30vw;
 }
 
 
-app-toppings, app-bowl, app-rabbits, app-timer, h3, button, app-order, h2, h3, h4, h5, #music {
+app-toppings, app-bowl, app-rabbits, app-timer, h3, button, app-order, h2, h3, h4, h5, h6, #music, audio {
     position: absolute;
-    font-size: 20px;
 }
+
 app-timer {
-    left: 85%;
-    font-size: 55px;
-}
-
-#music {
-    left: 85%;
-    top: 90%;
-}
-
-h6 {
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
+    left: 92vw;
+    font-size: 4vw;
 }
 
 audio {
-    width: 100px;
-    height: 20px;
+    width: 20vw;
+    height: 2vw;
+    top: 48vw;
+    left: 75vw;
 }
 
 h2 {
-    left: 25%;
-    top: 63%;
-    font-size: 30px;
+    left: 25vw;
+    top: 55vw;
+    font-size: 3vw;
 }
 
 h3 {
-    left: 85%;
+    left: 90vw;
+    font-size: 2vw
 }
 
 button {
-    top: 55%;
-    left: 70%;
-    font-size: 30px;
+    top: 48vw;
+    left: 45vw;
+    font-size: 2vw;
     border: 1px solid #7F0000;
     background-color: white;
     padding: 10px;
@@ -77,9 +70,21 @@ button:hover {
 }
 
 h4 {
-    top: 70%;
+    top: 18vw;
+    left: 30vw;
+    font-size: 2vw;
 }
 
 h5 {
-    top: 85%;
+    top: 30vw;
+    left: 30vw;
+    font-size: 2vw;
 }
+
+h6 {
+    top: 47vw;
+    left: 80vw;
+    font-size: 2vw;
+    width: 90vw;
+}
+

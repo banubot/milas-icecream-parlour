@@ -90,13 +90,13 @@ export class GameControllerComponent implements OnInit {
    */
   updateRound() {
     this.round++;
-    if (this.round % 2 === 0) {
+    if (this.round % 1 === 0) {
       this.timerStart--;
     }
-    if (this.round % 5 === 0) {
+    if (this.round % 6 === 0) {
       this.order.moreToppings();
     }
-    if (this.round % 7 === 0) {
+    if (this.round % 5 === 0) {
       this.order.moreRabbits();
     }
   }

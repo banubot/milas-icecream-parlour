@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-order',
   template: `
     <div>
-      <h4>Order:</h4>
+      <p id="orderLabel">Order:</p>
       <p>
         {{ orderText }}
       </p>
@@ -15,7 +15,6 @@ import { Component, OnInit } from '@angular/core';
 export class OrderComponent {
   orderText: string;
   numToppingsAvailable;
-  numToppingsToPick;
   numRabbitsAvailable;
   rabbitNames;
   toppingNames;
@@ -47,18 +46,14 @@ export class OrderComponent {
   }
 
   moreRabbits() {
-    this.numRabbitsAvailable++;
-    //should only go over if messed up game rules
-    if (this.numRabbitsAvailable < this.rabbitNames.size) {
-      this.numRabbitsAvailable = this.rabbitNames.size;
+    if (this.numRabbitsAvailable < this.rabbitNames.length) {
+      this.numRabbitsAvailable++;
     }
   }
 
   moreToppings() {
-    this.numToppingsAvailable++;
-    //should only go over if messed up game rules
-    if (this.numToppingsAvailable < this.toppingNames.size) {
-      this.numToppingsAvailable = this.toppingNames.size;
+    if (this.numToppingsAvailable < this.toppingNames.length) {
+      this.numToppingsAvailable++;
     }
   }
 
@@ -84,10 +79,7 @@ export class OrderComponent {
       let unique = false;
       while (!unique) {
         picked = Math.floor(Math.random() * (+max - +min)) + +min; 
-        unique = true;
-        if (this.toppingsPicked.includes(picked)) {
-            unique = false;
-        }
+        unique = ! this.toppingsPicked.includes(picked);
       }
       this.toppingsPicked.push(picked); 
     }
