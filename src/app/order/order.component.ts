@@ -21,18 +21,18 @@ export class OrderComponent {
   rabbitPicked;
   toppingsPicked;
   numToPick;
-  constructor() { 
-    this.toppingNames = ["Chocolate Sauce", "Sprinkles", 
+  constructor() {
+    this.toppingNames = ["Chocolate Sauce", "Sprinkles",
       "Banana", "Caramel Sauce", "Whipped Cream", "Cherry",
       "Strawberries", "Chocolate Chip Cookie"];
     this.rabbitNames = ["Chocolate", "Vanilla", "Strawberry",
-      "Caramel", "Mint", "Cookies n' Cream", "Neopolitan", "Blueberry"];
+      "Caramel", "Mint", "Cookies n' Cream", "Neopolitan", "Blue Moon"];
     this.toppingsPicked = [];
     this.rabbitPicked = 0;
     this.numToPick = 0;
     this.resetAvailable();
   }
-  
+
   newOrder() {
     this.pickRabbit();
     this.pickToppings();
@@ -58,10 +58,10 @@ export class OrderComponent {
   }
 
   pickRabbit() {
-    var min = 0; 
-    var max = this.numRabbitsAvailable;  
-    this.rabbitPicked = 
-      Math.floor(Math.random() * (+max - +min)) + +min; 
+    var min = 0;
+    var max = this.numRabbitsAvailable;
+    this.rabbitPicked =
+      Math.floor(Math.random() * (+max - +min)) + +min;
   }
 
   /* pick a random number of toppings 
@@ -69,19 +69,19 @@ export class OrderComponent {
    */
   pickToppings() {
     this.toppingsPicked = [];
-    var min = 0; 
-    var max = this.numToppingsAvailable;  
-    this.numToPick =  
-      Math.floor(Math.random() * (+max - +min)) + +min; 
+    var min = 0;
+    var max = this.numToppingsAvailable;
+    this.numToPick =
+      Math.floor(Math.random() * (+max - +min)) + +min;
     let i;
     for (i = 0; i < this.numToPick; i++) {
-      let picked = -1; 
+      let picked = -1;
       let unique = false;
       while (!unique) {
-        picked = Math.floor(Math.random() * (+max - +min)) + +min; 
-        unique = ! this.toppingsPicked.includes(picked);
+        picked = Math.floor(Math.random() * (+max - +min)) + +min;
+        unique = !this.toppingsPicked.includes(picked);
       }
-      this.toppingsPicked.push(picked); 
+      this.toppingsPicked.push(picked);
     }
   }
 
@@ -92,10 +92,10 @@ export class OrderComponent {
       toppingsStr += this.toppingNames[this.toppingsPicked[i]] + ", ";
     }
     toppingsStr += this.toppingNames[this.toppingsPicked[i]];
-    this.orderText= this.rabbitNames[this.rabbitPicked] 
+    this.orderText = this.rabbitNames[this.rabbitPicked]
       + " icecream";
     if (this.numToPick > 0) {
-      this.orderText +=  " with " + toppingsStr;  
+      this.orderText += " with " + toppingsStr;
     }
   }
 }
