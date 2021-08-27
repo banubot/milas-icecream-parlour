@@ -45,7 +45,7 @@ export class ToppingsComponent {
       document.getElementById("t" + i).style.visibility = "visible";
     }
     for (i = numAvailable; i < this.numToppings; i++) {
-      document.getElementById("t" + i).style.visibility = "hidden";
+      //document.getElementById("t" + i).style.visibility = "hidden";
     }
   }
 }

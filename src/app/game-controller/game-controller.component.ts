@@ -8,40 +8,37 @@ import { ToppingsComponent } from '../toppings/toppings.component';
 @Component({
   selector: 'app-game-controller',
   template: `
-    <div>
+    <center>
+      <app-order></app-order>
+      <app-bowl></app-bowl>
+      <h3 id="round"> Round {{ round }} </h3>
+      <app-timer></app-timer>
+      <button (click)="restart()" id="new">New Game</button>
+      <button (click)="submit()" id="submit">Submit</button>
+      <app-toppings (emitter)="onSelectTopping($event)"></app-toppings>
+      <app-rabbits (emitter)="onSelectRabbit($event)"></app-rabbits>
+      <p id="banner"> {{ this.banner }} </p>
       <div id="music">
-        <iframe src="assets/silence.mp3" allow="autoplay" style="display:none"></iframe>
         <audio autoplay loop controls>
           <source src="assets/Ice-Cream-Banana-rama-jama.mp3" type="audio/mpeg">
         </audio>
-        <h6>Music by <a href='#'>Gus</a></h6>
+        <h6 id="musiclabel">Music by <a href='https://www.youtube.com/channel/UCLRjOVywtrSM9Jgpn_nqCCg' target='_blank'>Haunted Sky</a></h6>
       </div>
-      <button (click)="restart()" id="new">New Game</button>
-      <app-order></app-order>
-      <app-timer></app-timer>
-      <h4>Toppings:</h4>
-      <app-toppings (emitter)="onSelectTopping($event)"></app-toppings>
-      <app-bowl></app-bowl>
-      <h5>Icecream:</h5>
-      <app-rabbits (emitter)="onSelectRabbit($event)"></app-rabbits>
-      <button (click)="submit()" id="submit">Submit</button>
-      <h2> {{ this.banner }} </h2>
-      <h3> Round {{ round }} </h3>
-    </div>
+    </center>
   `,
   styleUrls: ['./game-controller.component.css']
 })
 export class GameControllerComponent implements OnInit {
   banner: string;
-  @ViewChild(BowlComponent, null) bowl: BowlComponent;
-  @ViewChild(OrderComponent, {static: true}) order: OrderComponent;
-  @ViewChild(RabbitsComponent, null) rabbits: RabbitsComponent;
-  @ViewChild(TimerComponent, null) timer: TimerComponent;
-  @ViewChild(ToppingsComponent, null) toppings: ToppingsComponent;
+  @ViewChild(BowlComponent, {}) bowl: BowlComponent;
+  @ViewChild(OrderComponent, { static: true }) order: OrderComponent;
+  @ViewChild(RabbitsComponent, {}) rabbits: RabbitsComponent;
+  @ViewChild(TimerComponent, {}) timer: TimerComponent;
+  @ViewChild(ToppingsComponent, {}) toppings: ToppingsComponent;
   timerStart;
   round;
 
-  constructor() { 
+  constructor() {
     this.order = new OrderComponent();
     this.rabbits = new RabbitsComponent();
     this.toppings = new ToppingsComponent();
@@ -128,9 +125,9 @@ export class GameControllerComponent implements OnInit {
     let i;
     for (i = 0; i < numToppings; i++) {
       if (!this.order.toppingsPicked.includes(this.toppings.chosen[i])) {
-        return false;       
+        return false;
       }
-    }    
+    }
     return true;
   }
 }

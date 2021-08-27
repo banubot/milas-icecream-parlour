@@ -41,7 +41,7 @@ export class RabbitsComponent  {
       document.getElementById("r" + i).style.visibility = "visible";
     }
     for (i = numAvailable; i < this.numRabbits; i++) {
-      document.getElementById("r" + i).style.visibility = "hidden";
+      //document.getElementById("r" + i).style.visibility = "hidden";
     }
   }
 }

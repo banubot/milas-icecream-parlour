@@ -4,8 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-order',
   template: `
     <div>
-      <p id="orderLabel">Order:</p>
-      <p>
+      <p id="ordertxt">
         {{ orderText }}
       </p>
     </div>
@@ -32,6 +31,8 @@ export class OrderComponent {
     this.numToPick = 0;
     this.resetAvailable();
   }
+
+
 
   newOrder() {
     this.pickRabbit();

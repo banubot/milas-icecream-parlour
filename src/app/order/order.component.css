@@ -1,15 +1,14 @@
-div {
-    background-color: rgb(255, 251, 234);
-    padding: 10px;
+#ordertxt {
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 92vw;
+    max-width: 92vh;
+    padding: 5px;
+    font-size: 3.5vw;
 }
 
-
-#orderLabel {
-    font-size: 1.3vw;
-    line-height: 0;
-}
-
-p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+@media screen and (min-width: 100vh) {
+    #ordertxt {
+        font-size: 3.5vh;
+    }
 }

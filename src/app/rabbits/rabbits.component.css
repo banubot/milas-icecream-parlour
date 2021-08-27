@@ -1,9 +1,12 @@
 img {
-    width: 8vw;
-    height: 8vw;
+    width: 11.6vw;
+    height: 11.6vw;
+    max-width: 11.6vh;
+    max-height: 11.6vh;
     display: inline;
+    border: 1px solid rgba(0,0,0,0)
 }
 
 img:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px dotted rgb(124, 86, 86);
 }

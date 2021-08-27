@@ -2,16 +2,16 @@
 body {
     background-image: url("assets/bkg.png");
     background-repeat: repeat;
-    font-family: font;
-    color: #7F0000;
+    color: rgb(124, 86, 86);
+    font-family: "font";
 }
 
-button {
-    font-family: font;
-    color: #7F0000;
+button, a {
+    color: rgb(124, 86, 86);
+    font-family: "font";
 }
 
 @font-face {
     font-family: font;
-    src: url("assets/font.ttf");
+    src: url("assets/font7.otf");
   }
